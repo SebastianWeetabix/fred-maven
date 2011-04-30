@@ -4,7 +4,7 @@
 
   <groupId>freenet</groupId>
   <artifactId>freenet</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>1367</version>
   <packaging>jar</packaging>
 
   <name>freenet</name>
@@ -15,52 +15,52 @@
   </properties>
 
   <build>
-  	<plugins>
-  		<plugin>
-  			<groupId>org.apache.maven.plugins</groupId>
-  			<artifactId>maven-surefire-plugin</artifactId>
-  			<version>2.8</version>        
-  			<configuration>
-          		<testFailureIgnore>true</testFailureIgnore>
-        	</configuration>
-  		</plugin>
-  		<plugin>
-  			<groupId>org.apache.maven.plugins</groupId>
-  			<artifactId>maven-jar-plugin</artifactId>
-  			<version>2.3.1</version>
-  			<configuration>
-          		<archive>
-          		  <addMavenDescriptor>false</addMavenDescriptor>
-				  <compress/>
-				  <forced/>
-				</archive>
-        	</configuration>
-  		</plugin>
-  		<plugin>
-  			<groupId>org.codehaus.sonar</groupId>
-  			<artifactId>sonar-maven3-plugin</artifactId>
-  			<version>2.7</version>
-  		</plugin>
-  		<plugin>
-  			<groupId>org.apache.maven.plugins</groupId>
-  			<artifactId>maven-compiler-plugin</artifactId>
-  			<version>2.3.2</version>
-  			<configuration>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.8</version>
+        <configuration>
+              <testFailureIgnore>true</testFailureIgnore>
+          </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>2.3.1</version>
+        <configuration>
+              <archive>
+                <addMavenDescriptor>false</addMavenDescriptor>
+          <compress/>
+          <forced/>
+        </archive>
+          </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.sonar</groupId>
+        <artifactId>sonar-maven-plugin</artifactId>
+        <version>2.7</version>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>2.3.2</version>
+        <configuration>
               <source>1.5</source>
               <target>1.5</target>
             </configuration>
-  		</plugin>
-  	</plugins>
+      </plugin>
+    </plugins>
   </build>
   <dependencies>
 
-	<dependency>
-		<groupId>freenet</groupId>
-		<artifactId>freenet-ext</artifactId>
-		<version>1.0-SNAPSHOT</version>
-		<scope>system</scope>
-		<systemPath>${project.basedir}/lib/freenet-ext.jar</systemPath>
-	</dependency>
+  <dependency>
+    <groupId>freenet</groupId>
+    <artifactId>freenet-ext</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <scope>system</scope>
+    <systemPath>${project.basedir}/lib/freenet-ext.jar</systemPath>
+  </dependency>
 
 
     <dependency>
